@@ -1,0 +1,4 @@
+- X-UA-Compatible
+- nesting of ul/ol
+- links to mail/telephone
+- automatically formatting code in vscode

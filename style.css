@@ -1,0 +1,64 @@
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.container {
+  width: 100%;
+  max-width: 768px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  /* background-color: rgb(48, 61, 107); */
+  background-color: #28366b;
+  color: white;
+}
+
+.slogan-paragraph {
+  font-size: 26px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 900;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.main-header {
+  margin-bottom: 32px;
+}
+
+.main-navigation {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main-navigation ul {
+  list-style: upper-roman;
+  padding-left: 32px;
+  margin-bottom: 32px;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.main-footer {
+  text-align: center;
+  padding-bottom: 16px;
+}
