@@ -1,64 +1,208 @@
-html, body {
-  min-height: 100vh;
+/* Colors */
+
+:root {
+  --color-brand-main: #c6a765;
+  --color-bg-main: #fefefe;
+  --color-bg-secondary: #eee;
+  --color-button-bg: #161d27;
+  --color-text: #333;
+  --color-light: #000;
+  --color-border: #c8d5e5;
+
+  --font-serif: "Cormorant Garamond", "Times New Roman", Times, serif;
+  --font-sans: Outfit, Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-brand-main: #c6a765;
+    --color-bg-main: #1f2732;
+    --color-bg-secondary: #2e3947;
+    --color-button-bg: #161d27;
+    --color-text: #d7d7d7;
+    --color-light: #ffffff;
+    --color-border: #3a4553;
+  }
 }
 
 body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Text */
+
+/* utility classes */
+
+.bg-main {
+  background-color: var(--color-bg-main);
+}
+
+.bg-brand {
+  background-color: var(--color-brand-main);
+}
+
+.color-main {
+  color: var(--color-text);
+}
+
+.color-light {
+  color: var(--color-light);
+}
+
+.color-dark {
+  color: var(--color-bg-main);
+}
+
+.header-xl {
+  font-size: 65px;
+}
+
+.header-lg {
+  font-size: 45px;
+}
+
+.header-md {
+  font-size: 40px;
+}
+
+.header-sm {
+  font-size: 35px;
+}
+
+.header-xs {
+  font-size: 30px;
+}
+
+.text-sm {
+  font-size: 20px;
+}
+
+.text-md {
+  font-size: 22px;
+}
+
+.text-lg {
+  font-size: 30px;
+}
+
+.text-xl {
+  font-size: 35px;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.margin-top-sm {
+  margin-top: 20px;
+}
+
+.margin-top-md {
+  margin-top: 36px;
+}
+
+.margin-top-lg {
+  margin-top: 72px;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.padding-horizontal-lg {
+  padding-left: 72px;
+  padding-right: 72px;
+}
+
+.padding-vertical-lg {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+/* components */
+
+.btn {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  height: 85px;
+  border: transparent 1px solid;
+}
+
+.btn-primary {
+  background-color: var(--color-brand-main);
+  color: var(--color-bg-main);
+  border-color: var(--color-brand-main);
+}
+
+.btn-secondary {
+  background-color: var(--color-bg-main);
+  color: var(--color-light);
+  border-color: var(--color-brand-main);
+}
+
+.btn-tertiary {
+  background-color: var(--color-light);
+  color: var(--color-bg-main);
+  border-color: var(--color-light);
+}
+
+.btn-small {
+  width: 285px;
+}
+
+.btn-large {
+  width: 372px;
+}
+
+.no-text-decoration {
+  text-decoration: none;
+}
+
+.main-container {
+  max-width: 1400px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: auto;
+}
+
+.footer-links-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  row-gap: 20px;
 }
 
-.container {
-  width: 100%;
-  max-width: 768px;
-  min-height: 100vh;
+.footer-header {
+  border-top: 1px var(--color-border) solid;
+  border-bottom: 1px var(--color-border) solid;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.site-footer {
   display: flex;
   flex-direction: column;
+  row-gap: 40px;
+  padding-bottom: 100px;
 }
 
-.header-logo-container {
-  display: flex;
-  align-items: center;
-  column-gap: 20px;
-  /* background-color: rgb(48, 61, 107); */
-  background-color: #28366b;
-  color: white;
-}
-
-.slogan-paragraph {
-  font-size: 26px;
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: 900;
-  margin-bottom: 16px;
-  margin-top: 16px;
-}
-
-.main-header {
-  margin-bottom: 32px;
-}
-
-.main-navigation {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.main-navigation ul {
-  list-style: upper-roman;
-  padding-left: 32px;
-  margin-bottom: 32px;
-}
-
-.main-content {
-  flex: 1;
-}
-
-.main-footer {
-  text-align: center;
-  padding-bottom: 16px;
+@media (width >= 800px) {
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
